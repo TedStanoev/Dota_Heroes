@@ -31,5 +31,10 @@ namespace Dota_Heroes.Repository
         {
             throw new NotImplementedException();
         }
+
+        public void EditHeroName(Hero hero, string newHeroName)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

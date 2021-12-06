@@ -39,6 +39,13 @@ namespace Dota_Heroes.Heroes
             hero.Counters(this);
         }
 
+        public string ChangeName(string name)
+        {
+            this.Name = name;
+
+            return this.Name;
+        }
+
         public string ShowCounters()
         {
             return string.Join(", ", this.counters.Select(c => c.Name));

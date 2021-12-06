@@ -36,7 +36,16 @@ namespace Dota_Heroes.Heroes
 
         public void SetMediator(IMediator mediator)
         {
-            
+
+        }
+
+        public void EditHeroName(Hero hero, string newHeroName)
+        {
+            this.allHeroes.Remove(hero.Name);
+
+            hero.ChangeName(newHeroName);
+
+            this.AddNewHero(hero);
         }
     }
 }

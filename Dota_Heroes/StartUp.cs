@@ -80,6 +80,27 @@ namespace Dota_Heroes
                     }
                     
                 }
+                else if (command == "4")
+                {
+                    Console.WriteLine("Type hero's name:");
+                    string heroName = Console.ReadLine();
+
+                    Console.WriteLine("Type new name for hero:");
+                    string newHeroName = Console.ReadLine();
+
+                    try
+                    {
+                        Hero hero = heroRepository.FindHero(heroName);
+
+                        heroRepository.EditHeroName(hero, heroName);
+
+                        Console.WriteLine($"Hero {heroName} has been renamed to {newHeroName}");
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e.Message);
+                    }
+                }
             }
         }
 
@@ -89,7 +110,6 @@ namespace Dota_Heroes
                 $"2. Show hero's counters{Environment.NewLine}" +
                 $"3. Add a counter to a hero{Environment.NewLine}";
             Console.Write(welcomeText);
-        
         }
 
     }

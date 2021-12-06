@@ -12,5 +12,7 @@ namespace Dota_Heroes.Repository
         public void RemoveHero();
 
         public Hero FindHero(string heroName);
+
+        public void EditHeroName(Hero hero, string newHeroName);
     }
 }
