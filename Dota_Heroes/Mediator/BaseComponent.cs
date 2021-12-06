@@ -7,9 +7,9 @@ namespace Dota_Heroes.Mediator
     public abstract class BaseComponent : IComponent
     {
         protected IMediator mediator;
-        protected BaseComponent(IMediator mediator)
+        protected BaseComponent(IMediator mediator = null)
         {
-            this.SetMediator(mediator);
+            this.mediator = mediator;
         }
         public void SetMediator(IMediator mediator)
         {
